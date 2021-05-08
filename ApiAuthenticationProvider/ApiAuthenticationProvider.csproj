@@ -90,6 +90,7 @@
     <Compile Include="Authentication\Repository\FakeAuthenticatorRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ApiAuthenticationProviderBootstrapper.cs" />
+    <Compile Include="Shared\Bootstrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

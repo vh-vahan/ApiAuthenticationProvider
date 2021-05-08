@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiAuthenticationProvider", "ApiAuthenticationProvider\ApiAuthenticationProvider.csproj", "{6EB36C49-9E7C-4C5A-BE35-A8DA74E631B0}"
 EndProject
@@ -19,13 +19,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs41
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = ApiAuthenticationProvider\\ApiAuthenticationProvider.csproj
-		SccProjectName1 = ApiAuthenticationProvider
-		SccLocalPath1 = ApiAuthenticationProvider
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {565FA03D-D6A9-4157-B82A-B85C78540DD2}
 	EndGlobalSection
 EndGlobal

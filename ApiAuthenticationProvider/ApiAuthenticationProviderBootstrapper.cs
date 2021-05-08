@@ -1,5 +1,5 @@
 ﻿using ApiAuthenticationProvider.Authentication;
-using BasicLibrary.DependencyInjection;
+using Shared.DependencyInjection;
 using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;

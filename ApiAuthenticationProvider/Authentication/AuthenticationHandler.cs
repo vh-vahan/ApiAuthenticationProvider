@@ -82,16 +82,11 @@ namespace ApiAuthenticationProvider.Authentication
                 throw new SecurityException();
 
             int userId = int.Parse(userIds[0]);
-            //var roles = repository.GetUserRoles(userId);
-            //var terminals = repository.GetUserTerminals(userId);
-            //var areas = repository.GetUserAreas(userId);
             dynamic user = repository.LoadUser<dynamic>(userId);
             List<string> roles = user.GetRoles();
-            List<int> terminals = user.GetTerminals();
             List<string> areas = user.GetAreas();
 
             roles.ForEach(r => claims.Add(new Claim(ClaimTypes.Role, r.ToString())));
-            terminals.ForEach(t => claims.Add(new Claim(CustomClaimTypes.Terminal, t.ToString())));
             areas.ForEach(a => claims.Add(new Claim(CustomClaimTypes.ApiArea, a.ToString())));
 
             return new ClaimsPrincipal(new[] { new ClaimsIdentity(claims, ConcatenateAuthenticationTypes(authTypes).ToString()) });
@@ -123,7 +118,7 @@ namespace ApiAuthenticationProvider.Authentication
             }
             catch (Exception ex)
             {
-                LoggingManager.Write(ex, Category.TerminalBanking, Severity.Error);
+                LoggingManager.Write(ex, Category.General, Severity.Error);
                 var response = request.CreateResponse(HttpStatusCode.Unauthorized);
                 //response.Headers.WwwAuthenticate.Add(new AuthenticationHeaderValue(Basic));
                 return response;
